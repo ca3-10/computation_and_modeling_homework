@@ -14,13 +14,17 @@ def convert_to_numbers(input_string):
     return number_list
 
 def convert_to_letters(input_array):
-    numbers_to_letters_dict = {1:"a",2:"b",3:"c",4:"d",5:"e",6:"f",7:"g",8:"h",9:"i",10:"j",11:"k",12:"l",13:"m",14:"n",15:"o",16:"p",17:"q",18:"r",19:"s",20:"t",21:"u",22:"v",23:"w",24:"x",25:"y",26:"z"}
+    numbers_to_letters_dict = {0: " ",1:"a",2:"b",3:"c",4:"d",5:"e",6:"f",7:"g",8:"h",9:"i",10:"j",11:"k",12:"l",13:"m",14:"n",15:"o",16:"p",17:"q",18:"r",19:"s",20:"t",21:"u",22:"v",23:"w",24:"x",25:"y",26:"z"}
 
     word_list = []
     word = ""
 
     for numbers in input_array: 
+        if numbers > 27 or numbers < 0 : 
+            return "Only numbers 0-26"
+            break
         word_list.append(numbers_to_letters_dict[numbers])
+        
     
     return (word.join(word_list))
 
@@ -56,9 +60,11 @@ def count_characters(input_string):
     return char_counter
 
 def get_nth_terms_nonrecursive(n):
-    nth_terms = []
     a_1 = 5
     a_2 = 0
+    nth_terms = [a_1]
+    if n == 0: 
+        return "n >= 1 only"
     for n in range(1,n):
         a_2 = 3*a_1 - 4 
         nth_terms.append(a_2)
@@ -67,6 +73,8 @@ def get_nth_terms_nonrecursive(n):
     return nth_terms 
 
 def get_nth_term_recursive(n):
+    if n == 0: 
+        return "n >= 1 only"
     if n == 1: 
         return 5 
     return (3 * get_nth_term_recursive(n-1)) - 4
@@ -80,10 +88,26 @@ def convert_to_base_ten(binary):
     return sum(reverse_int_list)
 
 def convert_to_base_two(binary):
-    
-    
+    binary_list = []
+    if binary == 0: 
+        return 0 
+
+    while binary > 0:
+        if binary % 2 == 0:
+            binary_list.append(0)
+            binary = binary //  2 
+        else:
+            binary_list.append(1)
+            binary = binary // 2
+            
+    binary_list = binary_list[::-1]
+    binary_str = "".join([str(n) for n in binary_list])
+    return binary_str
 
     
+
+
+     
 
   
 
