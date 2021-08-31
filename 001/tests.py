@@ -15,7 +15,7 @@ from code import convert_to_base_two
 if check_for_symmetry("racecar") is not True:
     print ('check_for_symmetry  failed  on  input  "racecar" ')
 if check_for_symmetry("batman") is not False:
-    print ('check_for_symmetry  failed  on  input  "racecar" ')
+    print ('check_for_symmetry  failed  on  input  "batman" ')
 if check_for_symmetry("  @@#8#@@  ") is not True:
     print ('check_for_symmetry  failed  on  input  "  @@#8#@@  "')
 
@@ -60,10 +60,11 @@ if get_intersection([1, 1, 2, 23, 34, 45, 67], [34, 67, 1, 1, 2, 4]) != [1, 2, 3
     print ("get_intersection failed for input [1, 1, 2, 23, 34, 45, 67], [34, 67, 1, 1, 2, 4] ")
 
 # from code import get_union
-if get_union([1, 1, 3, 4, 56, 78, 10], [76, 8, 9, 0, 2, 1, 3]) != [1, 3, 4, 78, 10, 76, 8, 9, 0, 2]:
+if get_union([1, 1, 3, 4, 56, 78, 10], [76, 8, 9, 0, 2, 1, 3]) != [1, 3, 4, 56, 78, 10, 76, 8, 9, 0, 2]:
     print("get_union failed for input [1, 1, 3, 4, 78, 10], [76, 8, 9, 0, 2, 1, 3]")
 if get_union([0, 0, 0, 0, 0], [0, 0, 0, 0]) != [0]:
     print("get_union failed for input ([0, 0, 0, 0, 0],[0, 0, 0, 0] ")
+   
 
 
 # from code import count_characters
