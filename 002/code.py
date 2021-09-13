@@ -1,6 +1,4 @@
-from helperfunctions import convert_to_numbers
-from helperfunctions import convert_to_letters
-
+from helperfunctions import *
 
 def encode(string, a, b):
     trivial_encode = convert_to_numbers(string)
@@ -75,6 +73,3 @@ class Queue:
 
     def dequeue(self):
         self.items.pop(0)
-
-
-
