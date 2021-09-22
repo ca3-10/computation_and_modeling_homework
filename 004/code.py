@@ -14,7 +14,6 @@ def newt_raph_root_calc(number, root, presicion):
 def merge_sort(a, b):
     result = []
     total_length = len(a) + len(b)
-    print(total_length)
     a_index = 0
     b_index = 0
     while total_length > len(result):
@@ -30,6 +29,3 @@ def merge_sort(a, b):
             result.append(b[b_index])
             b_index += 1
     return result
-
-
-print(merge_sort([1, 2, 3, 4], [2, 5, 6, 7]))
