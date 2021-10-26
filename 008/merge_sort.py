@@ -12,6 +12,5 @@ def merge_sort(input_list):
 
         sorted_first_half = merge_sort(first_half)
         sorted_second_half = merge_sort(second_half)
-        return merge_sorted_lists(sorted_first_half, sorted_second_half)
         
-#33333333333333333333
+        return merge_sorted_lists(sorted_first_half, sorted_second_half)
