@@ -30,7 +30,6 @@ def tally_sort(numbers):
 def card_sort(numbers):
     for i in range(1, len(numbers)):
         sorting_value = numbers[i]
-         
         while i - 1 >= 0 and sorting_value < numbers[i - 1]:
             numbers[i], numbers[i - 1] = numbers[i - 1], numbers[i]
             i -= 1

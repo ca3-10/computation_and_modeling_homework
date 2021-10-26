@@ -1,0 +1,52 @@
+merge sort 
+input_list: [2, -2, 4, 3, 7, 7, 1, 1, 8, 10, 0]
+break in half: [2, -2, 4, 3, 7] [7, 1, 1, 8, 10, 0]
+recursive sort: 
+
+input_list: [2, -2, 4, 3, 7]
+break in half: [2, -2] [4, 3, 7]
+recursive sort 
+
+input_list: [2, -2]
+break in half: [2] [-2]
+call merge_sorted_lists to get [-2, 2]
+
+input_list: [4, 3, 7]
+break in half: [4] [3, 7]
+recursive sort 
+
+input_list: [3, 7]
+break in half: [3] [7]
+merge_sorted_lists [3,7]
+
+merge_sorted_lists [4] [3, 7] = [3, 4, 7]
+
+merge_sorted_lists [-2, 2] [3, 4, 7] = [-2, 2, 3, 7]
+
+input_list: [7, 1, 1, 8, 10, 0]
+break in half: [7, 1, 1] [8, 10, 0]
+recursive sort 
+
+input_list: [7, 1, 1]
+break in half: [7] [1, 1]
+recursive_sort
+
+input_list: [1, 1]
+break in half: [1] [1]
+merge_sorted_lists [1] [1] = [1, 1]
+
+merge_sorted_lists [7] [1, 1] = [1, 1, 7]
+
+input_list: [8, 10, 0]
+break in half: [8] [10, 0]
+recursive_sort 
+
+input_list: [10, 0]
+break in half: [10] [0]
+merge_sorted_lists [0, 10]
+
+merge_sorted_lists [0, 8, 10]
+
+merge_sorted_lists [1, 1, 7] [0, 8, 10] = [0, 1, 1, 7, 8, 10]
+
+merge_sorted_lists [-2, 2, 3, 7] [0, 1, 1, 7, 8, 10] = [-2, 0, 1, 1, 2, 3, 7, 7, 8, 10]

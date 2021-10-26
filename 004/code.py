@@ -11,7 +11,7 @@ def newt_raph_root_calc(number, root, presicion):
         presicion -= 1
     return x_k
 
-def merge_sort(a, b):
+def merge_sorted_lists(a, b):
     result = []
     total_length = len(a) + len(b)
     a_index = 0
