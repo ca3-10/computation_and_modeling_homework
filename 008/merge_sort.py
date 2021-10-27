@@ -6,7 +6,7 @@ def merge_sort(input_list):
 
         first_half = input_list[:half_index]
         second_half = input_list[half_index:]
-
+        
         if len(first_half) == 1 or len(second_half) == 1:
             return merge_sorted_lists(first_half, second_half)
 
